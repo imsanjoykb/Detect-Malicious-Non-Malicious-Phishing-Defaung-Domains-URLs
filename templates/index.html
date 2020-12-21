@@ -1,0 +1,42 @@
+{% from "_formhelpers.html" import render_field %}
+<html>
+<head>
+<title>Malicious URL Detection</title>
+</head>
+<body>
+	<center><h1> Detect Malicious, Non-Malicious, Phishing, Defaung Domains & URLs </h1></center>
+	
+
+	<center><p><h3> Please enter URL with protocol specified i.e https://www.youtube.com</h3></p></center>
+	<form method="POST" action="/">
+		<center><dl><h4>
+	    <h4>{{ form.csrf_token }}
+	    {{ render_field(form.url) }}</h4>
+	    <input type="submit" value="Check" style="background-color: brown;">
+	    </h4></dl></center>
+	</form>
+
+</body>
+
+<style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7%;
+      background-color: #ee422e;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+    </style>
+    
+    <div class="footer">
+      <div class="contact">
+        <a target="_blank" href="https://github.com/imsanjoykb"><i class="fab fa-github fa-lg contact-icon"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/imsanjoykb/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <h4 class='footer-description'>Developed by Sanjoy Biswas</h4>
+    </div>
+
+</html>
